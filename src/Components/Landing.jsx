@@ -10,12 +10,12 @@ const Landing = () => {
             />
             <p className="p">Discover the roots of your food: empowering farmers and enriching communities!</p>
         </div>
-        <a href="./Components/FarmerLogin">
+        <a href="./FarmerLogin">
             <span className="p-wrapper">
                 <p className="text-wrapper-2">I want to locally sell my farmed produce</p>
             </span>
         </a>
-        <a href="./Components/CustomerLogin">
+        <a href="./CustomerLogin">
             <span className="span">
                 <p className="text-wrapper-3">I want to buy fresh, local produce</p>
             </span>

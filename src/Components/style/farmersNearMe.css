@@ -1,0 +1,162 @@
+.text-wrapper{
+    width: 10000%;
+    font-size: 70px;
+    top:10%;
+}
+.farmers-near.div {
+    color: #4a914d;
+    font-family: "Lemon", Helvetica;
+    font-size: 48px;
+    font-weight: 400;
+    left: 144px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 232px;
+    width: 717px;
+}
+  
+.farmers-near.overlap {
+    height: 523px;
+    left: 95px;
+    position: absolute;
+    top: 319px;
+    width: 1313px;
+}
+  
+.farmers-near.profile-photo {
+    background-color: #97cf9a;
+    border-radius: 137.5px/134px;
+    height: 268px;
+    left: 75px;
+    position: absolute;
+    top: 30px;
+    width: 275px;
+  }
+  
+  .farmers-near.overlap-group {
+    height: 268px;
+    position: relative;
+  }
+  
+  .farmers-near .mask-group {
+    height: 268px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 275px;
+  }
+  
+  .farmers-near .overlap-wrapper {
+    border-radius: 137.5px/134px;
+    height: 268px;
+    left: 515px;
+    position: absolute;
+    top: 30px;
+    width: 275px;
+  }
+
+  .farmers-near .overlap-wrapper-1 {
+    border-radius: 0px;
+    height: 268px;
+    left: 20px;
+    position: absolute;
+    top: 30px;
+    width: 275px;
+  }
+  
+  .farmers-near .overlap-group-wrapper {
+    border-radius: 137.5px/134px;
+    height: 268px;
+    left: 951px;
+    position: absolute;
+    top: 30px;
+    width: 275px;
+  }
+  
+  .farmers-near .star {
+    height: 92px;
+    left: 289px;
+    position: absolute;
+    top: 66%;
+    width: 102px;
+  }
+  
+  .farmers-near .text-wrapper-2 {
+    color: #00000078;
+    font-family: "Karla", Helvetica;
+    font-size: 32px;
+    font-weight: 300;
+    left: 319px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 70%;
+    width: 42px;
+  }
+  
+  .farmers-near .img {
+    height: 92px;
+    left: 729px;
+    position: absolute;
+    top: 66%;
+    width: 102px;
+  }
+  
+  .farmers-near .text-wrapper-3 {
+    color: #00000078;
+    font-family: "Karla", Helvetica;
+    font-size: 32px;
+    font-weight: 300;
+    left: 759px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 70%;
+    width: 42px;
+  }
+  
+  .farmers-near .star-2 {
+    height: 92px;
+    left: 1167px;
+    position: absolute;
+    top: 66%;
+    width: 102px;
+  }
+  
+  .farmers-near .text-wrapper-4 {
+    color: #00000078;
+    font-family: "Karla", Helvetica;
+    font-size: 32px;
+    font-weight: 300;
+    left: 1197px;
+    letter-spacing: 0;
+    line-height: normal;
+    position: absolute;
+    top: 70%;
+    width: 42px;
+  }
+  
+  .farmers-near .rectangle {
+    height: 523px;
+    left: 5%;
+    top: 30%;
+    width: 1313px;
+  }
+  .image-cropper {
+    height: 268px;
+    width: 275px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+
+    top: 90%;
+    left:30%;
+  }
+  
+  .image-cropper .img {
+    display: inline;
+    margin: 0 auto;
+    height: 100%;
+    width: auto;
+  }

@@ -12,12 +12,12 @@ const CustomerProfile = () =>{
       <a className="text-wrapper-4" href="mailto:emailname@email.com" rel="noopener noreferrer" target="_blank">
         emailname@email.com
       </a>
-      <a href="./Components/FarmersNearMe">
+      <a href="./FarmersNearMe">
         <span className="rectangle-2">
           <span className="div">Farmers Near Me</span>
         </span>
       </a>
-      <a href="./Components/SearchLocalProduce">
+      <a href="./SearchLocalProduce">
         <span className="rectangle" >
         <span className="div">Search Local Produce</span>
         </span>
