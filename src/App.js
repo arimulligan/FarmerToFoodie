@@ -6,7 +6,7 @@ import {
 import Landing from './Components/Landing';
 import FarmerLogin from './Components/FarmerLogin';
 import CustomerLogin from './Components/CustomerLogin';
-import CustomerProfile from './Components/FarmerProfile';
+import CustomerProfile from './Components/CustomerProfile';
 import FarmerProfile from './Components/FarmerProfile';
 
 export default function App (){

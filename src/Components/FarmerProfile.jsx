@@ -4,7 +4,7 @@ const FarmerProfile = () =>{
   return (
     <div className="farmer">
       <NavBar/>
-      <h1 className="h-1">My Profile</h1>
+      <h1 className="h-1">My Farmer Profile</h1>
       <div className="overlap-group">
         <div className="text-wrapper-2">Edit Profile</div>
       </div>
