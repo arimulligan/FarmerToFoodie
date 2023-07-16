@@ -1,25 +1,14 @@
  .overlap {
-  height: 100%;/*
-  left: 78px;
-  position: relative;
-  top: 72px;*/
+  height: 100%;
   width: 100%; 
 }
-
- .overlap-group {
-  /* height: 100%;
-  left: 13px;
-  position: absolute;
-  top: 0;
-  width: 100%; */
-}
-
+/* title */
  .text-wrapper {
   color: #4a914d;
   font-family: "Lemon", Helvetica;
   font-size: 96px;
   font-weight: 400;
-  left: 0;
+  left: 5%;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
@@ -27,37 +16,39 @@
   width: 894px;
 }
 
+/* picture of farmer  */
  .rectangle {
   height: 100%;
-  left: 561px;
+  right: 0px;
   object-fit: cover;
   position: absolute;
-  /* top: 99px; */
   width: 860px;
 }
 
+/* logo */
  .p {
   color: #abc3ac;
   font-family: "Karla", Helvetica;
   font-size: 36px;
   font-style: italic;
   font-weight: 400;
-  left: 0;
+  left: 5%;
   letter-spacing: 0;
   line-height: normal;
   position: absolute;
   top: 265px;
   width: 788px;
 }
-
+/* upper button green */
  .p-wrapper {
   background-color: #4a914d;
   border-radius: 40px;
   height: 165px;
-  left: 0;
+  left: 5%;
   position: absolute;
-  top: 440px;
+  top: 50%;
   width: 460px;
+  display:block;
 }
 
  .text-wrapper-2 {
@@ -73,15 +64,16 @@
   top: 32px;
   width: 372px;
 }
-
- .div {
+/* lower button yellow */
+ .span {
   background-color: #e8d154;
   border-radius: 40px;
   height: 168px;
-  left: 0;
+  left: 5%;
   position: absolute;
-  top: 647px;
+  top: 75%;
   width: 460px;
+  display:block;
 } 
 
  .text-wrapper-3 {
