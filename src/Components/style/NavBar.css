@@ -1,0 +1,27 @@
+.navbar {
+    height: 60px;
+    background-color:#4a914d;
+    position: relative;
+}
+.nav-elements ul {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+  }
+
+.nav-elements ul a {
+    color: white;
+    text-decoration: none;
+    font-size: 33px;
+    font-family: "Karla", Helvetica;
+}
+
+.navbar ul li { 
+	padding-left: 3%;
+    padding-top: 10px;
+ }
+
+
+ .nav-elements ul img {
+    padding-left: 700px;
+  }

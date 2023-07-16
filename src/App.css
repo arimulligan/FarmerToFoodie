@@ -25,7 +25,7 @@
   width: 860px;
 }
 
-/* logo */
+/* motto */
  .p {
   color: #abc3ac;
   font-family: "Karla", Helvetica;
@@ -89,3 +89,203 @@
   top: 33px;
   width: 372px;
 } 
+
+.farmer .text-wrapper {
+  color: #ffffff;
+  font-family: "Karla", Helvetica;
+  font-size: 40px;
+  font-weight: 500;
+  left: 68px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 99px;
+  width: 372px;
+}
+/* green button for profile farmer */
+.farmer .rectangle {
+  background-color: #E9D154;
+  border-radius: 40px;
+  height: 15%;
+  left: 5%;
+  position: absolute;
+  top: 80%;
+  width: 40%;
+}
+/* second yellow button */
+.farmer .rectangle-2 {
+  background-color: #E9D154;
+  border-radius: 40px;
+  height: 15%;
+  left: 50%;
+  position: absolute;
+  top: 80%;
+  width: 40%;
+}
+
+.farmer .div {
+  color: #ffffff;
+  font-family: "Karla", Helvetica;
+  font-size: 60px;
+  font-weight: 500;
+  left: 60px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 24px;
+  width: 523px;
+}
+.farmer .span {
+  color: #ffffff;
+  font-family: "Karla", Helvetica;
+  font-size: 60px;
+  font-weight: 500;
+  left: 60px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 24px;
+  width: 523px;
+  display:block;
+}
+
+.farmer .h-1 {
+  color: #4a914d;
+  font-family: "Karla", Helvetica;
+  font-size: 64px;
+  font-weight: 800;
+  left: 148px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 88px;
+  width: 401px;
+}
+
+.farmer .overlap-group {
+  background-color: #ececec;
+  border-radius: 15px;
+  height: 57px;
+  left: 530px;
+  position: absolute;
+  top: 452px;
+  width: 299px;
+}
+
+.farmer .text-wrapper-2 {
+  color: #3a773c;
+  font-family: "Karla", Helvetica;
+  font-size: 32px;
+  font-weight: 400;
+  left: 0;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: center;
+  top: 7px;
+  width: 295px;
+}
+
+.farmer .text-wrapper-3 {
+  color: #3a773c;
+  font-family: "Karla", Helvetica;
+  font-size: 40px;
+  font-weight: 700;
+  left: 495px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 220px;
+  white-space: nowrap;
+  width: 358px;
+}
+
+.farmer .text-wrapper-4 {
+  color: #80b282;
+  font-family: "Karla", Helvetica;
+  font-size: 36px;
+  font-weight: 400;
+  left: 530px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-decoration: underline;
+  top: 330px;
+  white-space: nowrap;
+  width: 422px;
+}
+
+.farmer .profile-photo {
+  background-color: #97cf9a;
+  border-radius: 137.5px/134px;
+  height: 268px;
+  left: 170px;
+  position: absolute;
+  top: 204px;
+  width: 275px;
+}
+
+.farmer .overlap-group-2 {
+  height: 268px;
+  position: relative;
+}
+
+.farmer .ellipse {
+  background-color: #3a773c;
+  border-radius: 59.02px/55.58px;
+  height: 111px;
+  left: 79px;
+  position: absolute;
+  top: 54px;
+  width: 118px;
+}
+
+.farmer .mask-group {
+  height: 268px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 275px;
+}
+
+.farmer .p {
+  color: #80b282;
+  font-family: "Karla", Helvetica;
+  font-size: 36px;
+  font-weight: 400;
+  left: 529px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 378px;
+  white-space: nowrap;
+  width: 435px;
+}
+
+.farmer .city-country {
+  color: #80b282;
+  font-family: "Karla", Helvetica;
+  font-size: 36px;
+  font-weight: 400;
+  left: 529px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  top: 288px;
+  white-space: nowrap;
+  width: 332px;
+}
+
+.farmer .text-wrapper-5 {
+  color: #4a914d;
+  font-family: "Lemon", Helvetica;
+  font-size: 64px;
+  font-weight: 400;
+  left: 964px;
+  letter-spacing: 0;
+  line-height: normal;
+  position: absolute;
+  text-align: right;
+  top: 65px;
+  width: 443px;
+}
