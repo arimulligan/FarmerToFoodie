@@ -1,6 +1,9 @@
+import { useLocation } from 'react-router-dom';
 import NavBar from './NavBar';
 
 const CustomerProfile = () =>{
+  const location = useLocation();
+  const { user } = location.state || {};
   return (
     <div className="farmer">
       <NavBar/>
@@ -8,10 +11,14 @@ const CustomerProfile = () =>{
       <div className="overlap-group">
         <div className="text-wrapper-2">Edit Profile</div>
       </div>
-      <div className="text-wrapper-3">Name Surname</div>
-      <a className="text-wrapper-4" href="mailto:emailname@email.com" rel="noopener noreferrer" target="_blank">
-        emailname@email.com
-      </a>
+      {user && (
+        <div>
+          <div className="text-wrapper-3">{user.name}</div>
+          <a className="text-wrapper-4" href={`mailto:${user.email}`} rel="noopener noreferrer" target="_blank">
+            {user.email}
+          </a>
+        </div>
+      )}
       <a href="./FarmersNearMe">
         <span className="rectangle-2">
           <span className="div">Farmers Near Me</span>

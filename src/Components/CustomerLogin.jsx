@@ -1,42 +1,64 @@
-import React from "react";
-import "./style/customerLogin.css";
+import { googleLogout, useGoogleLogin } from '@react-oauth/google';
+import axios from 'axios';
+import { default as React, useEffect, useState } from "react";
+import { useNavigate } from 'react-router-dom';
 
 const CustomerLogin = ()=> {
-    return (
-      <div className="macbook-pro">
-      <div className="overlap-group">
-          <div className="text-wrapper">Farmer</div>
-          <div className="rectangle" />
-          <div className="div">Enter your password</div>
+  const [ user, setUser ] = useState([]);
+  const [ profile, setProfile ] = useState([]);
+  const navigate = useNavigate();
+
+  const login = useGoogleLogin({
+      onSuccess: (codeResponse) => setUser(codeResponse),
+      onError: (error) => console.log('Login Failed:', error)
+  });
+
+  useEffect(
+      () => {
+          if (user) {
+              axios
+                  .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
+                      headers: {
+                          Authorization: `Bearer ${user.access_token}`,
+                          Accept: 'application/json'
+                      }
+                  })
+                  .then((res) => {
+                      setProfile(res.data);
+                  })
+                  .catch((err) => console.log(err));
+          }
+      },
+      [ user ]
+  );
+
+  // log out function to log the user out of google and set the profile array to null
+  const logOut = () => {
+      googleLogout();
+      setProfile(null);
+      navigate('/'); // Redirect to the landing page
+  };
+
+  return (
+      <div>
+          <h2>React Google Login</h2>
+          <br />
+          <br />
+          {profile ? (
+              <div>
+                  <img src={profile.picture} alt="Profile Picture" />
+                  <h3>User Logged in</h3>
+                  <p>Name: {profile.name}</p>
+                  <p>Email Address: {profile.email}</p>
+                  <br />
+                  <br />
+                  <button onClick={logOut}>Log out</button>
+              </div>
+          ) : (
+              <button onClick={() => login()}>Sign in with Google 🚀 </button>
+          )}
       </div>
-      <img className="undraw-online" alt="Undraw online" src="undraw-online-groceries-a02y-1.svg" />
-      <div className="text-wrapper-2">Register</div>
-      <div className="overlap">
-          <div className="text-wrapper-3">Enter your name</div>
-      </div>
-      <div className="div-wrapper">
-          <div className="text-wrapper-4">Enter your email</div>
-      </div>
-      <div className="text-wrapper-5">Name</div>
-      <div className="text-wrapper-6">Email</div>
-      <div className="text-wrapper-7">Password</div>
-      <div className="overlap-2">
-          <div className="rectangle-2" />
-          <div className="text-wrapper-3">Enter your city</div>
-          <div className="rectangle-3" />
-          <div className="text-wrapper-8">Enter your country</div>
-      </div>
-      <div className="text-wrapper-9">City</div>
-      <div className="text-wrapper-10">Country</div>
-      <div className="overlap-3">
-          <div className="text-wrapper-11">REGISTER</div>
-      </div>
-      <p className="already-have-an">
-          <span className="span">Already have an account? </span>
-          <span className="text-wrapper-12">login</span>
-      </p>
-  </div>
-    );
+  );
 }
 
 export default CustomerLogin;

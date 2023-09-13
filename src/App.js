@@ -1,14 +1,15 @@
 import React from 'react';
-import './App.css';
 import {
-  Routes, Route,
+  Route,
+  Routes,
 } from 'react-router-dom';
-import Landing from './Components/Landing';
-import FarmerLogin from './Components/FarmerLogin';
+import './App.css';
 import CustomerLogin from './Components/CustomerLogin';
 import CustomerProfile from './Components/CustomerProfile';
+import FarmerLogin from './Components/FarmerLogin';
 import FarmerProfile from './Components/FarmerProfile';
 import FarmersNearMe from './Components/FarmersNearMe';
+import Landing from './Components/Landing';
 
 export default function App (){
   return (
