@@ -31,8 +31,8 @@ function CustomerProfile({ profile, onLogOut }) {
           <div className="ellipse" />
           <img
             className="mask-group"
-            alt="Mask group"
-            src="https://generation-sessions.s3.amazonaws.com/eaa870d1b7bc3cebc7fd219e158236df/img/mask-group@2x.png"
+            alt="Users profile"
+            src={profile.picture}
           />
         </div>
       </div>
