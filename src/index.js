@@ -9,6 +9,7 @@ import CustomerProfile from './Components/CustomerProfile';
 import FarmerProfile from './Components/FarmerProfile';
 import FarmersNearMe from './Components/FarmersNearMe';
 import Landing from './Components/Landing';
+import SearchLocalProduce from './Components/SearchLocalProduce';
 import { UserProvider } from './Components/UserProfile';
 import './index.css';
 
@@ -20,6 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/CustomerProfile" element={<CustomerProfile/>} />
           <Route path="/FarmerProfile" element={<FarmerProfile/>} />
           <Route path="/FarmersNearMe" element={<FarmersNearMe/>} />
+          <Route path="/SearchLocalProduce" element={<SearchLocalProduce/>} />
           <Route path="/" element={<Landing />}></Route>
         </Routes>
       </UserProvider>

@@ -6,7 +6,7 @@ function FarmerProfile({ profile, onLogOut }) {
       <NavBar/>
       <h1 className="h-1">My Farmer Profile</h1>
       <div className="overlap-group">
-        <div className="text-wrapper-2">Edit Profile</div>
+      <button className="text-wrapper-2" onClick={onLogOut} >Log Out</button>
       </div>
         <div>
           <div className="text-wrapper-3">{profile.name}</div>
