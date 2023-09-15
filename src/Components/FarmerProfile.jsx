@@ -1,10 +1,6 @@
-import { useLocation } from 'react-router-dom';
 import NavBar from './NavBar';
-import { useUserProfile } from './UserProfile';
 
-const FarmerProfile = () =>{
-  const location = useLocation();
-  const { profile } = useUserProfile();
+function FarmerProfile({ profile, onLogOut }) {
   return (
     <div className="farmer">
       <NavBar/>
@@ -12,14 +8,12 @@ const FarmerProfile = () =>{
       <div className="overlap-group">
         <div className="text-wrapper-2">Edit Profile</div>
       </div>
-      {profile && (
         <div>
           <div className="text-wrapper-3">{profile.name}</div>
           <a className="text-wrapper-4" href={`mailto:${profile.email}`} rel="noopener noreferrer" target="_blank">
             {profile.email}
           </a>
         </div>
-      )}
       <a href="./ViewMyProducts">
         <span className="rectangle-2">
           <span className="div">View My Products</span>

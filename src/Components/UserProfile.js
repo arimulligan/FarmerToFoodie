@@ -1,24 +1,22 @@
-import React, { createContext, useContext, useState } from 'react';
+import { createContext, useContext, useState } from 'react';
 
-// Create a context for user profile data
-const UserProfileContext = createContext();
+const UserContext = createContext([null, () => {}]);
 
-export function UserProfileProvider({ children }) {
-    const [profile, setProfile] = useState(null);
-
-    // You can add more functions to update or manage the profile data if needed
+export const UserProvider = ({ children }) => {
+    const [user, setUser] = useState(null);
 
     return (
-        <UserProfileContext.Provider value={{ profile, setProfile }}>
+        <UserContext.Provider value={[user, setUser]}>
         {children}
-        </UserProfileContext.Provider>
+        </UserContext.Provider>
     );
-}
+};
 
-export function useUserProfile() {
-    const context = useContext(UserProfileContext);
-    if (!context) {
-        throw new Error('useUserProfile must be used within a UserProfileProvider');
-    }
-    return context;
-}
+export const useUser = () => {
+    return useContext(UserContext);
+};
+
+// export const isLoggedIn = () => {
+//     const [user] = useContext(UserContext); // Access user directly from context
+//     return user !== null; // Check if the user is not null
+// };
