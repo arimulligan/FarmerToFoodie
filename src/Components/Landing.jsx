@@ -1,51 +1,52 @@
 import { googleLogout, useGoogleLogin } from '@react-oauth/google';
-import jwt_decode from 'jwt-decode';
-import { useState } from 'react';
+import axios from 'axios';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-
+import { useUserProfile } from './UserProfile';
 
 const Landing = () => {
+    console.log('Farmer Login');
     googleLogout();
     const navigate = useNavigate();
-    const [user, setUser] = useState({
-        email: '', // Initialize with empty values
-        name: '',
-    });
+    const [user, setUser] = useState([]);
+    const [ profile ] = useState([]);
+    const { setProfile } = useUserProfile();
 
     const farmerLogin = useGoogleLogin({
         onSuccess: (codeResponse) => {
-            console.log('Farmer Login onSuccess callback called');
-        // Assuming you receive user data from Google login
-        const decodedToken = jwt_decode(codeResponse);
-        console.log(decodedToken);
-        const userData = {
-            email: decodedToken.email,
-            name: decodedToken.name,
-        };
-        setUser(userData);
-        
-
-        // Redirect to the Farmer page
-        navigate('/FarmerProfile');
+            setUser(codeResponse)
+            // Redirect to the Farmer page
+            navigate('/FarmerProfile');
         },
         onError: (error) => console.log('Farmer Login Failed:', error),
     });
     
     const customerLogin = useGoogleLogin({
         onSuccess: (codeResponse) => {
-        // Assuming you receive user data from Google login
-        const decodedToken = jwt_decode(codeResponse);
-        const userData = {
-            email: decodedToken.email,
-            name: decodedToken.name,
-        };
-        setUser(userData);
-        
-        // Redirect to the Customer page
-        navigate('/CustomerProfile');
+            setUser(codeResponse)
+            // Redirect to the Customer page
+            navigate('/CustomerProfile');
         },
         onError: (error) => console.log('Customer Login Failed:', error),
     });
+    useEffect(
+        () => {
+            if (user.access_token) {
+                axios
+                    .get(`https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`, {
+                        headers: {
+                            Authorization: `Bearer ${user.access_token}`,
+                            Accept: 'application/json'
+                        }
+                    })
+                    .then((res) => {
+                        setProfile(res.data);
+                    })
+                    .catch((err) => console.log(err));
+            }
+        },
+        [ user, setProfile ]
+    );
     return (
         <div className="overlap">
         <div className="overlap-group">

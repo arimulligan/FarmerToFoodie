@@ -1,21 +1,22 @@
 import { useLocation } from 'react-router-dom';
 import NavBar from './NavBar';
+import { useUserProfile } from './UserProfile';
 
 const FarmerProfile = () =>{
   const location = useLocation();
-  const { user } = location.state || {};
+  const { profile } = useUserProfile();
   return (
     <div className="farmer">
       <NavBar/>
-      <h1 className="h-1">{user.name}</h1>
+      <h1 className="h-1">My Farmer Profile</h1>
       <div className="overlap-group">
         <div className="text-wrapper-2">Edit Profile</div>
       </div>
-      {user && (
+      {profile && (
         <div>
-          <div className="text-wrapper-3">{user.name}</div>
-          <a className="text-wrapper-4" href={`mailto:${user.email}`} rel="noopener noreferrer" target="_blank">
-            {user.email}
+          <div className="text-wrapper-3">{profile.name}</div>
+          <a className="text-wrapper-4" href={`mailto:${profile.email}`} rel="noopener noreferrer" target="_blank">
+            {profile.email}
           </a>
         </div>
       )}
